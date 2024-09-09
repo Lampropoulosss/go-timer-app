@@ -30,6 +30,7 @@
   function startTimer(event) {
     const [hours, minutes, seconds] = event.detail.timer.split(":").map(Number);
     let totalSeconds = hours * 3600 + minutes * 60 + seconds;
+    if (totalSeconds <= 0) return;
 
     timer.set(totalSeconds);
 
@@ -57,6 +58,9 @@
   function clearTimer() {
     clearInterval(interval);
     timer.set(0);
+    isPaused = false;
+
+    if (!alarmFinished) return;
     alarmFinished = false;
     Stop();
   }
