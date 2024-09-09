@@ -4,7 +4,7 @@ Simple project in Go that creates a window and uses webview to load the Svelte c
 
 ## How to build the application
 
-Make sure you have [Wails](https://wails.io/) and follow the instructions:
+Make sure you have [Wails](https://wails.io/) installed on your system and in your PATH variable and follow the instructions:
 
 1) `cd frontend && npm i`
 2) `cd ../ && go get`
